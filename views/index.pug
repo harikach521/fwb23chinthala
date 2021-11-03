@@ -3,11 +3,13 @@ extends layout
 block content
   h1= title
   p Hi! Dancing is fun!!
-  button(type="button", class="btn btn-info") Press Me
-  div(id="target")
-   b Display 
-
-    script.  
+  button(type="button", class="btn btn-success", onclick="update()") Press Me
+  br
+  br
+  div(id = "target") 
+    b Display
+  
+  script.  
    var client_count=0;
      function update() {
        client_count++;
