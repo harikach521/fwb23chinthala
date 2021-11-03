@@ -2,28 +2,28 @@ extends layout
 
 block content
   h1= title
-  p Welcome to the Omlet pug
+  p Welcome to the omlet pug
    div(class="container-fluid")
         div(class="row")
             -
                 let omlet = [
                     {
-                        "Itemname": "Bread Omlet",
-                        "Quantity": 3,
-                        "price": 5
-                    },
-                    {
-                        "Itemname": "French Omlet",
-                        "Quantity": 2,
+                        "Itemname": "french omlet",
+                        "Quantity": 6,
                         "price": 12
                     },
                     {
-                        "Itemname": "Spinach Omlet",
-                        "Quantity": 1,
-                        "price": 4
+                        "Itemname": "bread omlet",
+                        "Quantity": 3,
+                        "price": 11.30
+                    },
+                    {
+                        "Itemname": "spinach omlet",
+                        "Quantity": 2,
+                        "price": 5.60
                     },                   
                 ]
-            each v,index in Omlet
+            each v,index in omlet
                 table(style='width:100%', border='1')
                   tr 
                     div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}

@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('omlet', { title: 'Search Results for Omlet' });
+  res.render('omlet', { title: 'Search Results for Omlets' });
 });
 
 module.exports = router;
