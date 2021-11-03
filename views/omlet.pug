@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the Omlet pug
+   div(class="container-fluid")
+        div(class="row")
+            -
+                let omlet = [
+                    {
+                        "Itemname": "Bread Omlet",
+                        "Quantity": 3,
+                        "price": 5
+                    },
+                    {
+                        "Itemname": "French Omlet",
+                        "Quantity": 2,
+                        "price": 12
+                    },
+                    {
+                        "Itemname": "Spinach Omlet",
+                        "Quantity": 1,
+                        "price": 4
+                    },                   
+                ]
+            each v,index in Omlet
+                table(style='width:100%', border='1')
+                  tr 
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
+                    br
+                    br
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.Quantity}
+                    br
+                    br
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
+  script.                
+        function buy(intemNo)
+        {
+              alert(`Your omlet is ${intemNo + 1}`)
+        }
